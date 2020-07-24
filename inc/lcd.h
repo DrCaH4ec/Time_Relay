@@ -14,74 +14,74 @@
 #include "digitalio_avr.h"
 
 //-----------------------------------------------------------------------------
-#define ON 	1
-#define OFF 	0
+#define ON      1
+#define OFF     0
 //-----------------------------------------------------------------------------
-#define CLEAR_DISPLAY 			(1<<0)
-#define RETURN_HOME 			(1<<1)
-#define ENTRY_MODE_SET			(1<<2)
-#define DISPLAY_ON_OFF_CONTROL		(1<<3)
-#define CURSOR_OR_DISPLAY_SHIFT		(1<<4)
-#define FUNCTION_SET			(1<<5)
-#define SET_CGRAM_ADDRES		(1<<6)
-#define SET_DDRAM_ADDRES		(1<<7)
+#define CLEAR_DISPLAY                   (1<<0)
+#define RETURN_HOME                     (1<<1)
+#define ENTRY_MODE_SET                  (1<<2)
+#define DISPLAY_ON_OFF_CONTROL          (1<<3)
+#define CURSOR_OR_DISPLAY_SHIFT         (1<<4)
+#define FUNCTION_SET                    (1<<5)
+#define SET_CGRAM_ADDRES                (1<<6)
+#define SET_DDRAM_ADDRES                (1<<7)
 
 // Entry mode set
-#define SH 				(1<<0)
-#define I_D				(1<<1)
+#define SH                              (1<<0)
+#define I_D                             (1<<1)
 
 // Display ON/OFF control
-#define B 				(1<<0)
-#define C 				(1<<1)
-#define D 				(1<<2)
+#define B                               (1<<0)
+#define C                               (1<<1)
+#define D                               (1<<2)
 
 // Cursor or Display Shift
-#define R_L				(1<<2)
-#define S_C 				(1<<3)
+#define R_L                             (1<<2)
+#define S_C                             (1<<3)
 
 // Function set
-#define F 				(1<<2)
-#define N				(1<<3)
-#define DL 				(1<<4)
+#define F                               (1<<2)
+#define N                               (1<<3)
+#define DL                              (1<<4)
 
 //-----------------------------------------------------------------------------
 struct lcd_st{
-	volatile uint8_t * RsPort;
-	uint8_t RsPin;
-	volatile uint8_t * EnablePort;
-	uint8_t EnablePin;
-	volatile uint8_t * D4Port;
-	uint8_t D4Pin;
-	volatile uint8_t * D5Port;
-	uint8_t D5Pin;
-	volatile uint8_t * D6Port;
-	uint8_t D6Pin;
-	volatile uint8_t * D7Port;
-	uint8_t D7Pin;
+        volatile uint8_t * RsPort;
+        uint8_t RsPin;
+        volatile uint8_t * EnablePort;
+        uint8_t EnablePin;
+        volatile uint8_t * D4Port;
+        uint8_t D4Pin;
+        volatile uint8_t * D5Port;
+        uint8_t D5Pin;
+        volatile uint8_t * D6Port;
+        uint8_t D6Pin;
+        volatile uint8_t * D7Port;
+        uint8_t D7Pin;
 };
 //-----------------------------------------------------------------------------
 
 /* You can use it for simplification
 
-	struct lcd_st disp;
+        struct lcd_st disp;
 
-	disp.RsPort = 	;
-	disp.RsPin = 	;
+        disp.RsPort =   ;
+        disp.RsPin =    ;
 
-	disp.EnablePort = ;
-	disp.EnablePin = ;
+        disp.EnablePort = ;
+        disp.EnablePin = ;
 
-	disp.D7Port = 	;
-	disp.D7Pin = 	;
+        disp.D7Port =   ;
+        disp.D7Pin =    ;
 
-	disp.D6Port = 	;
-	disp.D6Pin = 	;
+        disp.D6Port =   ;
+        disp.D6Pin =    ;
 
-	disp.D5Port = 	;
-	disp.D5Pin = 	;
+        disp.D5Port =   ;
+        disp.D5Pin =    ;
 
-	disp.D4Port = 	;
-	disp.D4Pin = 	;
+        disp.D4Port =   ;
+        disp.D4Pin =    ;
 
  */
 

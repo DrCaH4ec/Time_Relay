@@ -5,9 +5,9 @@
 #include <stdio.h>
 
 struct Time_st{
-	uint8_t hour;
-	uint8_t min;
-	uint8_t sec;
+    uint8_t hour;
+    uint8_t min;
+    uint8_t sec;
 };
 
 inline void Time_Inc(struct Time_st * my_time);

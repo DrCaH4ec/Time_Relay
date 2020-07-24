@@ -19,22 +19,22 @@
 
 
 //*****************************************************************************
-//	Variables which can be changed by "user"-----------------------------------
+//  Variables which can be changed by "user"-----------------------------------
 //*****************************************************************************
 
-#define BUTTON_BEEP_DELAY	20		// duration of beep for buttons in 
-									// miliseconds (max = 65535)
+#define BUTTON_BEEP_DELAY   20      // duration of beep for buttons in 
+                                    // miliseconds (max = 65535)
 
-#define FINISH_BEEP_DELAY	1500	// duration of beep at the end of counting 
-									// in miliseconds (max = 65535)
+#define FINISH_BEEP_DELAY   1500    // duration of beep at the end of counting 
+                                    // in miliseconds (max = 65535)
 
-#define NUM_OF_CELLS 32				// number of timers, which can be reminded
-									// by this device (max = 255)
+#define NUM_OF_CELLS 32             // number of timers, which can be reminded
+                                    // by this device (max = 255)
 
 //*****************************************************************************
 
-#define FALSE 	0
-#define TRUE 	1
+#define FALSE   0
+#define TRUE    1
 
 #define BUZER_PORT &PORTD
 #define BUZER_PIN 7
@@ -43,9 +43,9 @@
 #define RELAY_PIN 6
 
 enum enumStateOfRelay{
-	RELAY_OFF = 0,
-	RELAY_ON,
-	RELAY_PAUSE
+    RELAY_OFF = 0,
+    RELAY_ON,
+    RELAY_PAUSE
 };
 
 void EncoderCheck();
